@@ -47,3 +47,23 @@ char* toPyramide(char *s){
 
 	return s;
 }
+
+
+char* toFractionnate(char *s){
+	for (int i = 0; i < strlen(s); ++i)
+	{
+		if(s[0]>'a' && s[0]<'z'){
+			s[0]=s[0]-32;
+		}
+		if(s[i]==' '){
+			if(s[i+1]>'a' && s[i+1]<'z'){
+				printf("\n");
+				s[i+1]=s[i+1]-32;
+			}
+		}else{
+			printf("%c", s[i]);
+		}
+	}
+	printf("\n");
+	return s;
+}
